@@ -1,2 +1,2 @@
-# Clone Salon
- salon
+# AcademyKuda
+ My Academy
