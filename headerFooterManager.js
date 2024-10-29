@@ -87,7 +87,7 @@ class SpecialFooter extends HTMLElement {
 <div class="footer-center">
     <div>
         <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <p><span>Hoërskool </span>OOS MOOT</p>
+        <p><span>84 Arend street </span>Kwaggasrand Pretoria west</p>
     </div>
     <div>
         <i class="fa fa-phone"></i>
