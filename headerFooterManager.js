@@ -3,66 +3,65 @@ class SpecialHeader extends HTMLElement {
     this.innerHTML = `
 
   <header>
-        <nav class="navbar">
-          <div class="branding">
-            <h2><a href="#" class="branding-logo"><img src="./img/Salon4.jpg" alt="" srcset=""></a></h2>
-          </div>
-          <label for="input-hamburger" class="hamburger "></label>
-          <input type="checkbox" id="input-hamburger" hidden>
-          <ul class="menu">
-            <li><a href="index.html" class="menu-link">Home</a></li>
-      
-            <li><a href="about.html" class="menu-link">About</a></li>
-            <li class="has-dropdown">
-              <a href="#" class="menu-link">Services
-                <span class="arrow"></span>
-              </a>
-              <ul class="submenu">
-                <li><a href="highperformance.html" class="menu-link">Hair Artistry</a></li>
-                <li><a href="OneOn.html" class="menu-link">Nail Elegance</a></li>
-                <li><a href="#" class="menu-link">Special Packages</a></li>
-                <li class="has-dropdown">
-                  <a href="#" class="menu-link">Other Services
-                    <span class="arrow"></span>
-                  </a>
-                  <ul class="submenu">
-                    <li><a href="group.html" class="menu-link">Makeup Services</a></li>
-                    <li><a href="group.html" class="menu-link">Eyebrow and Eyelash Services</a></li>
-                    <li><a href="vacation.html" class="menu-link">Price List</a></li>
-                    <li class="has-dropdown">
-                      <a href="tournaments.html" class="menu-link">Shop.Specials
-                        <span class="arrow"></span>
-                      </a>
-                      <ul class="submenu">
-                        <li><a href="#" class="menu-link">SA GAMES</a></li>
-                        <li><a href="#" class="menu-link">GN OPEN</a></li>
-                        <li><a href="#" class="menu-link">GN CLOSED</a></li>
-                        <li><a href="#" class="menu-link">J'BURG OPEN</a></li>
-                      </ul>
-                    </li>
-                    
-                  </ul>
-                </li>
-                
-              </ul>
-            </li>
-            
-                <li class="has-dropdown">
-                    <a href="#about" data-after="About" class="menu-link">Gallery
+      <nav class="navbar">
+        <div class="branding">
+          <h2><a href="#" class="branding-logo"><img src="./img/Salon4.jpg" alt="" srcset=""></a></h2>
+        </div>
+        <label for="input-hamburger" class="hamburger "></label>
+        <input type="checkbox" id="input-hamburger" hidden>
+        <ul class="menu">
+          <li><a href="index.html" class="menu-link">Home</a></li>
+    
+          <li><a href="about.html" class="menu-link">About</a></li>
+          <li class="has-dropdown">
+            <a href="#" class="menu-link">Services
+              <span class="arrow"></span>
+            </a>
+            <ul class="submenu">
+              <li><a href="highperformance.html" class="menu-link">Hair Artistry</a></li>
+              <li><a href="OneOn.html" class="menu-link">Nail Elegance</a></li>
+              <li><a href="#" class="menu-link">Special Packages</a></li>
+              <li class="has-dropdown">
+                <a href="#" class="menu-link">Other Services
+                  <span class="arrow"></span>
+                </a>
+                <ul class="submenu">
+                  <li><a href="group.html" class="menu-link">Makeup Services</a></li>
+                  <li><a href="group.html" class="menu-link">Eyebrow and Eyelash Services</a></li>
+                  <li><a href="vacation.html" class="menu-link">Price List</a></li>
+                  <li class="has-dropdown">
+                    <a href="tournaments.html" class="menu-link">Shop.Specials
                       <span class="arrow"></span>
                     </a>
                     <ul class="submenu">
-                      <li><a href="pictures.html" class="menu-link">Pictures</a></li>
-                      <li><a href="video.html" class="menu-link">Videos</a></li>
+                      <li><a href="#" class="menu-link">SA GAMES</a></li>
+                      <li><a href="#" class="menu-link">GN OPEN</a></li>
+                      <li><a href="#" class="menu-link">GN CLOSED</a></li>
+                      <li><a href="#" class="menu-link">J'BURG OPEN</a></li>
                     </ul>
                   </li>
-            </li>
-            <li><a href="testimonials.html" class="menu-link">Salon.Specials</a></li>
-            <li><a href="contact.html" data-after="Contact" class="menu-link">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
+                  
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          
+              <li class="has-dropdown">
+                  <a href="#about" data-after="About" class="menu-link">Gallery
+                    <span class="arrow"></span>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="pictures.html" class="menu-link">Pictures</a></li>
+                    <li><a href="video.html" class="menu-link">Videos</a></li>
+                  </ul>
+                </li>
+          </li>
+          <li><a href="testimonials.html" class="menu-link">Salon.Specials</a></li>
+          <li><a href="contact.html" data-after="Contact" class="menu-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
         `;
   }
@@ -72,7 +71,7 @@ class SpecialFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
             
-    <footer class=" footer-distributed">
+        <footer class=" footer-distributed">
     <div class="footer-left">
     <h3> Scariccoh <span>Salon</span></h3>
     <p class="footer-links">

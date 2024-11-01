@@ -1,11 +1,11 @@
 const videosList = [
 {
-	video: './videos/VID_20240406_100542.mp4',
-	title: 'Imaan High Performance'
+	video: './videos/Salon30.mp4',
+	title: 'Salon Team'
 },
 {
-	video: './videos/2.mp4',
-	title: 'Derick Endurance Training'
+	video: './videos/Salon34.mp4',
+	title: 'kid'
 },
 {
 	video: './videos/3.mp4',

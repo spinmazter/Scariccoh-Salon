@@ -2,10 +2,10 @@
     box-sizing: border-box;
   
     --primary: #2c2f33;
-  --hover-color: #a7c7e7;
-  --dark: #575c63;
-  --light: #fff;
-  --header-bg: var(--primary);
+    --hover-color: #a7c7e7;
+    --dark: #575c63;
+    --light: #fff;
+    --header-bg: var(--primary);
   }
   *,
   *::after,
@@ -14,13 +14,17 @@
     margin: 0;
     padding: 0;
   }
-  body {
-    font-family: "josefin sans", "helvetica", sans-serif;
-    font-size: 1rem;
-    background-image: url("./img/salon5.jpg");
+  body.home {
+    background-image: url(./img/Salon\ Background.jpg);
     background-size: 100% 100vh;
-      background-repeat: no-repeat;  
+    background-repeat: no-repeat;
   }
+  
+  /* Remove the background image for all other pages */
+  body:not(.home) {
+    background-image: none;
+  }
+  
   
   
   header {
@@ -374,21 +378,22 @@
 
 
   /* hero section */
-  /* hero section */
-  .hero-section{
-    padding: 0px 420px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-bottom: 50px;
-  }
+  
+  .hero-section {
+    padding: 0px 50px; /* Further reduced padding for left alignment */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content towards the left */
+    padding-bottom: 50px;
+    
+}
   .hero-section h1{
     font-family:"Lemon-Regular";
     font-weight: 400;
     font-size: 64px;
     width: 400px;
     text-transform: capitalize;
-    color: #fff;
+    color: #cc5353;
   }
   span{
     color: #ef5e41;
@@ -396,27 +401,28 @@
   .hero-section p{
     font-family:"OpenSans-Regular";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
     width: 309px;
     padding: 30px 0px;
-    color: #f3e5ab;
+    color: #534809;
   }
   .hero-section button{
     font-family:"OpenSans-Bold";
     font-weight: 700;
-    font-size: 15px;
+    font-size: 25px;
     color: #fff;
     width: 135px;
     height: 65px;
     border-radius: 50px 0px 50px 0px;
     background-color: #ef5e41;
+    cursor: pointer;
     border: none;
   }
   /*end hero section */
   
-  /*end hero section */
+  
 
- /* Style for the Welcome section */
+ 
 /* Style for the Welcome section */
 #Welcome {
   display: flex;
@@ -468,9 +474,11 @@
 }
 
 .content-welcome p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #666;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Media query to change layout for smaller screens */
@@ -486,6 +494,9 @@
     text-align: center;
   }
 }
+
+/*End welcome section/
+
 
 /* Programs Section */
 .Pcontainer{
@@ -604,9 +615,11 @@ transform: scale(1.1);
 }
 
 .content-Philosophy p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #666;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .textWrapper-Philosophy span {
@@ -618,40 +631,90 @@ transform: scale(1.1);
 
 
 /* Style for Gallery Section */
-.gallery-section {
-  background-color: #f4f4f4; /* Light grey background for gallery */
-  padding: 50px 0;
-}
-/* Style for the "More photos" button */
-.botn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff5722; /* Button background color */
-  color: white; /* Button text color */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Container styling */
+.Picontainer {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between; /* Distribute elements vertically */
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
 }
 
-/* Hover effect for the button */
-.botn:hover {
-  background-color: #e64a19; /* Darker shade on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+/* Heading styling at the Top */
+h1 {
+	font-size: 2em;
+	color: cyan;
+	margin: 0;
 }
 
-/* Active state (when the button is clicked) */
-.botn:active {
-  transform: translateY(1px); /* Slight press down effect */
+/* 3D Slider */
+.slider {
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation: rotate 23s linear infinite;
 }
 
-/* Focus state (when the button is focused via keyboard) */
-.botn:focus {
-  outline: 2px solid #ffccbc; /* Outline for keyboard navigation */
-  outline-offset: 2px;
+@keyframes rotate {
+	from {
+		transform: perspective(1000px) rotateY(0deg);
+	}
+	to {
+		transform: perspective(1000px) rotateY(360deg);
+	}
 }
 
+.slider div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: center;
+	transform-style: preserve-3d;
+	border-radius: 15px;
+	transform: rotateY(calc(30deg * var(--n))) translateZ(390px);
+	-webkit-box-reflect: below 0px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.250));
+}
+
+.slider div img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.slider div:hover > img {
+	cursor: pointer;
+	transform: scale(1.1);
+	border: 2px solid cyan;
+}
+
+/* More Pictures Button at the Bottom */
+.more-pictures {
+	background-color: cyan;
+	color: black;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.more-pictures:hover {
+	background-color: darkcyan;
+}
+
+/* End Style for Gallery Section */
 
 /* About Section */
 
@@ -695,9 +758,10 @@ transform: scale(1.1);
   margin: 0 auto;background-color: #4caf50;
 }
 .headings p{
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #666;
   margin-bottom: 35px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .Acontainer{
   width: 90%;
@@ -716,8 +780,8 @@ transform: scale(1.1);
   overflow: hidden;
 }
 .about-image img{
-  width: 45%;
-  height: 10%;
+  width: 75%;
+  height: 40%;
   display: block;
   transform: 0.5s ease;
   margin-left: 200px;
@@ -734,9 +798,10 @@ transform: scale(1.1);
   color: #333;
 }
 .about-content p{
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #666;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .about-content .read-more{
   display: inline-block;
